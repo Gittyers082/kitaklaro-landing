@@ -3,9 +3,9 @@
   "configurations": [
     {
       "name": "kitaklaro",
-      "runtimeExecutable": "node",
-      "runtimeArgs": ["scripts/dev-server.mjs", "5173"],
-      "port": 5173
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "web"],
+      "port": 3100
     }
   ]
 }

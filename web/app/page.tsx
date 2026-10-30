@@ -1,4 +1,3 @@
-import { ArrowRight } from 'lucide-react';
 import { CountUp } from '@/components/CountUp';
 import { Nav } from '@/components/Nav';
 import { ParallaxPhoto } from '@/components/ParallaxPhoto';
@@ -7,7 +6,6 @@ import { Reveal } from '@/components/Reveal';
 import { TaxDraft } from '@/components/TaxDraft';
 import { VoiceDemo } from '@/components/VoiceDemo';
 import { Ways } from '@/components/Ways';
-import { asset } from '@/lib/assets';
 
 const AUDIENCE = [
   {
@@ -47,15 +45,6 @@ export default function LandingPage() {
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3 motion-safe:animate-rise-in [animation-delay:380ms]">
-                <a href={asset('/login/')}
-                  className="group inline-flex min-h-12 items-center gap-2 rounded-full bg-cream px-6 font-semibold text-oxblood transition-transform duration-150 hover:-translate-y-0.5 active:scale-95"
-                >
-                  Gumawa ng tindahan
-                  <ArrowRight
-                    className="h-4 w-4 transition-transform duration-150 group-hover:translate-x-1"
-                    aria-hidden="true"
-                  />
-                </a>
                 <a
                   href="#paano"
                   className="inline-flex min-h-12 items-center rounded-full border-2 border-cream/45 px-6 font-semibold text-cream transition-transform duration-150 hover:-translate-y-0.5 active:scale-95"
@@ -199,22 +188,13 @@ export default function LandingPage() {
             <div className="mx-auto max-w-6xl px-4 py-16 text-center sm:px-6 lg:py-24">
               <Reveal>
                 <h2 id="simula" className="mx-auto max-w-[14ch] font-display text-display-xl font-extrabold">
-                  Simulan ngayong gabi.
+                  Klaro ang kita. Klaro ang bukas.
                 </h2>
               </Reveal>
               <Reveal delay={0.1}>
                 <p className="mx-auto mt-5 max-w-[40ch] text-lead text-cream/90">
-                  Bago ang bukas na rush, handa na ang talaan mo.
+                  Ito ang gusto naming lutasin para sa bawat maliit na tindahan.
                 </p>
-                <a href={asset('/login/')}
-                  className="group mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-cream px-7 font-semibold text-oxblood transition-transform duration-150 hover:-translate-y-0.5 active:scale-95"
-                >
-                  Gumawa ng tindahan
-                  <ArrowRight
-                    className="h-4 w-4 transition-transform duration-150 group-hover:translate-x-1"
-                    aria-hidden="true"
-                  />
-                </a>
               </Reveal>
             </div>
           </div>

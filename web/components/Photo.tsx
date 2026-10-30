@@ -1,9 +1,8 @@
 import { asset } from '@/lib/assets';
 
 export type PhotoName = 'owner' | 'market' | 'counter';
-
-// Credits for all three are in the footer of the landing page (and beside the
-// photo on the login page). Alt text says what is in the frame.
+// Credits for all three are in the footer of the landing page. Alt text says
+// what is in the frame.
 const ALT: Record<PhotoName, string> = {
   owner:
     'May-ari ng sari-sari store sa likod ng counter. Nakasabit sa itaas ang mga sachet ng shampoo at sabon; nasa harap ang gulay at itlog.',

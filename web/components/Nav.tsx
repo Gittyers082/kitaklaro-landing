@@ -29,12 +29,6 @@ export function Nav() {
             </a>
           ))}
         </div>
-
-        <a href={asset('/login/')}
-          className="ml-auto inline-flex min-h-11 items-center rounded-full bg-ink px-5 text-sm font-semibold text-cream transition-transform duration-150 hover:-translate-y-0.5 active:scale-95 md:ml-0"
-        >
-          Mag-login
-        </a>
       </nav>
     </header>
   );

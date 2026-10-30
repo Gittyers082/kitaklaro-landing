@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { MotionProvider } from '@/components/MotionProvider';
-import { RegisterSW } from '@/components/RegisterSW';
 
 export const metadata: Metadata = {
   title: {
@@ -11,9 +10,7 @@ export const metadata: Metadata = {
   description:
     'Itala ang benta sa boses o litrato, awtomatikong bawas sa stock, at ulat na tanggap ng BIR at ng lender. Gumagana kahit walang internet.',
   applicationName: 'KitaKlaro',
-  manifest: '/manifest.webmanifest',
   icons: { icon: '/icons/icon.svg', apple: '/icons/icon-192.png' },
-  appleWebApp: { capable: true, title: 'KitaKlaro' },
 };
 
 export const viewport: Viewport = {
@@ -34,7 +31,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Lumaktaw sa nilalaman
         </a>
         <MotionProvider>{children}</MotionProvider>
-        <RegisterSW />
       </body>
     </html>
   );

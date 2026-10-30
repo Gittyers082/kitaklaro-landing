@@ -6,7 +6,7 @@ const nextConfig = {
   // is plain HTML that paints before any JavaScript arrives. That matters on
   // a low-end Android on a weak connection.
   output: 'export',
-  trailingSlash: true,           // /login/ -> login/index.html on any static host
+  trailingSlash: true,           // /about/ -> about/index.html on any static host
   images: { unoptimized: true }, // photos are pre-sized in public/assets
   reactStrictMode: true,
 
