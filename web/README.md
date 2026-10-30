@@ -47,3 +47,13 @@ script: with JavaScript disabled, every section and number is present.
 Motion is gated for slow connections. Above-the-fold entrances are CSS only.
 Below-the-fold reveals start visible and hide only after the client mounts.
 Everything honours `prefers-reduced-motion`.
+
+## Deploying to GitHub Pages
+
+Pages serves `/docs` on the `dev` branch. After changing the page:
+
+```bash
+npm run pages      # builds into ../docs with the /kitaklaro-landing prefix
+```
+
+Then commit `docs/` and push. Pages does not build anything itself.
