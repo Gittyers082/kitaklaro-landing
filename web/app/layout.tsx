@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { MotionProvider } from '@/components/MotionProvider';
+import { asset } from '@/lib/assets';
 
 export const metadata: Metadata = {
   title: {
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   description:
     'Itala ang benta sa boses o litrato, awtomatikong bawas sa stock, at ulat na tanggap ng BIR at ng lender. Gumagana kahit walang internet.',
   applicationName: 'KitaKlaro',
-  icons: { icon: '/icons/icon.svg', apple: '/icons/icon-192.png' },
+  icons: { icon: asset('/icons/icon.svg'), apple: asset('/icons/icon-192.png') },
 };
 
 export const viewport: Viewport = {

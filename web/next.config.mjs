@@ -9,6 +9,8 @@ const nextConfig = {
   trailingSlash: true,           // /about/ -> about/index.html on any static host
   images: { unoptimized: true }, // photos are pre-sized in public/assets
   reactStrictMode: true,
+  // Same prefix lib/assets.ts uses, so Next's own JS and CSS load under a sub-path too.
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || undefined,
 
   // Pin the project root. Without this, a package-lock.json higher up the
   // disk (outside this repo) is picked up and the build warns about it.
