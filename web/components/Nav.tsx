@@ -1,4 +1,5 @@
 import { Logo } from './Logo';
+import { MobileMenu } from './MobileMenu';
 import { asset } from '@/lib/assets';
 
 const LINKS = [
@@ -29,6 +30,8 @@ export function Nav() {
             </a>
           ))}
         </div>
+
+        <MobileMenu links={LINKS} />
       </nav>
     </header>
   );

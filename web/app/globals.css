@@ -14,6 +14,11 @@
     scroll-behavior: smooth;
   }
 
+  /* Nav links jump here; keep the section clear of the sticky header. */
+  section[id] {
+    scroll-margin-top: 3.5rem;
+  }
+
   body {
     @apply bg-ground font-sans text-base text-ink antialiased;
     -webkit-tap-highlight-color: transparent;

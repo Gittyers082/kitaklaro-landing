@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { m, useReducedMotion } from 'framer-motion';
-import { Camera, Hand, Mic } from 'lucide-react';
-import type { ReactNode } from 'react';
-import { Reveal } from './Reveal';
+import { m, useReducedMotion } from "framer-motion";
+import { Camera, Hand, Mic } from "lucide-react";
+import { useEffect, useState, type ReactNode } from "react";
+import { Reveal } from "./Reveal";
 
-const SPRING = { type: 'spring', stiffness: 260, damping: 20 } as const;
+const SPRING = { type: "spring", stiffness: 260, damping: 20 } as const;
 
 type CardProps = {
   tilt: number;
@@ -16,11 +16,15 @@ type CardProps = {
 /** Sits a degree or two off-square, and snaps straight when you reach for it. */
 function Card({ tilt, className, children }: CardProps) {
   const reduce = useReducedMotion();
+  // Match the server render first; it cannot know the motion preference.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  const still = mounted && reduce;
   return (
     <m.article
       initial={{ rotate: tilt }}
-      whileHover={reduce ? undefined : { rotate: 0, y: -8 }}
-      whileTap={reduce ? undefined : { scale: 0.985 }}
+      whileHover={still ? undefined : { rotate: 0, y: -8 }}
+      whileTap={still ? undefined : { scale: 0.985 }}
       transition={SPRING}
       className={`rounded-panel p-6 sm:p-8 ${className}`}
     >
@@ -30,22 +34,22 @@ function Card({ tilt, className, children }: CardProps) {
 }
 
 const VOICE_LINES = [
-  { said: 'Dalawang sardinas, trenta singko isa.', amount: '+₱70.00' },
-  { said: 'Bayad sa Meralco, limang daan.', amount: '−₱500.00' },
-  { said: 'Isang Bear Brand, kinse.', amount: '+₱15.00' },
+  { said: "Dalawang sardinas, trenta singko isa.", amount: "+₱70.00" },
+  { said: "Bayad sa Beneco, limang daan.", amount: "−₱500.00" },
+  { said: "Isang Bear Brand, kinse.", amount: "+₱15.00" },
 ];
 
 const RECEIPT = [
-  { name: '1 Box Alaska Evaporada (48 lata)', amount: '₱1,440.00' },
-  { name: 'Golden Fiesta Cooking Oil 1L', amount: '₱480.00' },
-  { name: 'Silver Swan Toyo 1L', amount: '₱190.00', check: true },
+  { name: "1 Box Alaska Evaporada (48 lata)", amount: "₱1,440.00" },
+  { name: "Golden Fiesta Cooking Oil 1L", amount: "₱480.00" },
+  { name: "Silver Swan Toyo 1L", amount: "₱190.00", check: true },
 ];
 
 const TILES = [
-  { name: 'Lucky Me', price: '₱19.00' },
-  { name: 'Bear Brand', price: '₱15.00' },
-  { name: 'Kopiko', price: '₱9.00' },
-  { name: 'Itlog', price: '₱9.50' },
+  { name: "Lucky Me", price: "₱19.00" },
+  { name: "Bear Brand", price: "₱15.00" },
+  { name: "Kopiko", price: "₱9.00" },
+  { name: "Itlog", price: "₱9.50" },
 ];
 
 const BARS = [34, 58, 86, 48, 100, 66, 40, 78, 52, 92, 44, 70];
@@ -54,22 +58,31 @@ export function Ways() {
   return (
     <div className="grid gap-5 lg:grid-cols-12 lg:gap-6">
       <Reveal className="lg:col-span-7 lg:row-span-2">
-        <Card tilt={-1.4} className="flex h-full flex-col justify-between gap-10 bg-gold text-gold-ink">
+        <Card
+          tilt={-1.4}
+          className="flex h-full flex-col justify-between gap-10 bg-gold text-gold-ink"
+        >
           <div>
             <h3 className="flex items-center gap-3 font-display text-display-lg font-black">
               Boses
               <Mic className="h-9 w-9" aria-hidden="true" />
             </h3>
             <p className="mt-4 max-w-[34ch] text-lead">
-              Magsalita habang nagbibigay ng paninda. Kasama na ang presyo, kahit Taglish.
+              Magsalita habang nagbibigay ng paninda. Kasama na ang presyo,
+              kahit Taglish.
             </p>
           </div>
 
           <ul className="space-y-4">
             {VOICE_LINES.map((line) => (
-              <li key={line.said} className="flex items-baseline justify-between gap-4 text-lg font-medium">
+              <li
+                key={line.said}
+                className="flex items-baseline justify-between gap-4 text-lg font-medium"
+              >
                 <span>&ldquo;{line.said}&rdquo;</span>
-                <span className="whitespace-nowrap font-bold tabular-nums">{line.amount}</span>
+                <span className="whitespace-nowrap font-bold tabular-nums">
+                  {line.amount}
+                </span>
               </li>
             ))}
           </ul>
@@ -97,13 +110,17 @@ export function Ways() {
             <Camera className="h-7 w-7" aria-hidden="true" />
           </h3>
           <p className="mt-3 max-w-[36ch]">
-            Kunan ng litrato. Binabasa ang bawat linya, at ikaw ang magkukumpirma bago i-save.
+            Kunan ng litrato. Binabasa ang bawat linya, at ikaw ang
+            magkukumpirma bago i-save.
           </p>
 
           <div className="mt-5 rounded-card bg-paper p-4 text-ink">
             <ul className="space-y-2.5 text-sm">
               {RECEIPT.map((row) => (
-                <li key={row.name} className="flex items-baseline justify-between gap-3">
+                <li
+                  key={row.name}
+                  className="flex items-baseline justify-between gap-3"
+                >
                   <span>
                     {row.name}
                     {row.check && (
@@ -112,7 +129,9 @@ export function Ways() {
                       </span>
                     )}
                   </span>
-                  <span className="whitespace-nowrap font-semibold tabular-nums">{row.amount}</span>
+                  <span className="whitespace-nowrap font-semibold tabular-nums">
+                    {row.amount}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -131,7 +150,8 @@ export function Ways() {
             <Hand className="h-7 w-7" aria-hidden="true" />
           </h3>
           <p className="mt-3 max-w-[36ch]">
-            Kapag maingay ang paligid o tulog ang bata, pindutin lang ang paninda.
+            Kapag maingay ang paligid o tulog ang bata, pindutin lang ang
+            paninda.
           </p>
           <div className="mt-5 grid grid-cols-2 gap-2.5">
             {TILES.map((tile) => (
