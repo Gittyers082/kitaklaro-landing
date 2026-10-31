@@ -5,14 +5,14 @@ module.exports = {
     extend: {
       /* ------------------------------------------------------------------
          Typography
-         Inter Black for headings, EB Garamond for everything else. Both are
+         Inter Black for headings, DM Sans for everything else. Both are
          self-hosted by next/font (see app/layout.tsx), so every device gets
          them; the names after the variable only cover the moment before the
          files load.
          ------------------------------------------------------------------ */
       fontFamily: {
         display: ['var(--font-inter)', 'Inter', '"Segoe UI"', 'Roboto', 'Arial', 'sans-serif'],
-        sans: ['var(--font-garamond)', '"EB Garamond"', 'Garamond', 'Georgia', 'serif'],
+        sans: ['var(--font-dm-sans)', '"DM Sans"', '"Segoe UI"', 'Roboto', 'Arial', 'sans-serif'],
       },
 
       /* Four display steps, far apart. A graded scale reads as mush. */
@@ -21,10 +21,7 @@ module.exports = {
         'display-xl': ['clamp(2.25rem, 10vw, 5rem)', { lineHeight: '0.95', letterSpacing: '-0.03em' }],
         'display-lg': ['clamp(2rem, 5vw, 3.5rem)', { lineHeight: '1', letterSpacing: '-0.025em' }],
         'display-md': ['clamp(1.5rem, 3.2vw, 2.25rem)', { lineHeight: '1.05', letterSpacing: '-0.02em' }],
-        lead: ['clamp(1.25rem, 2.4vw, 1.5rem)', { lineHeight: '1.4' }],
-        // Garamond's small x-height reads a size smaller than a sans, so body steps go up one.
-        sm: ['1rem', { lineHeight: '1.5rem' }],
-        base: ['1.125rem', { lineHeight: '1.75rem' }],
+        lead: ['clamp(1.125rem, 2.2vw, 1.375rem)', { lineHeight: '1.4' }],
       },
 
       /* ------------------------------------------------------------------

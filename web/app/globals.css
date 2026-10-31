@@ -16,9 +16,6 @@
 
   body {
     @apply bg-ground font-sans text-base text-ink antialiased;
-    /* Garamond defaults to old-style figures; prices and stock counts need lining
-       ones. A feature setting, because `tabular-nums` resets font-variant-numeric. */
-    font-feature-settings: 'lnum' 1;
     -webkit-tap-highlight-color: transparent;
   }
 
