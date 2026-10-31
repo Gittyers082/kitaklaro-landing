@@ -25,7 +25,7 @@ export function TaxDraft() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16 lg:py-24">
         <div>
           <Reveal>
-            <h2 id="buwis-title" className="font-display text-display-lg font-extrabold">
+            <h2 id="buwis-title" className="font-display text-display-lg font-black">
               Hindi hula ang buwis.
             </h2>
           </Reveal>
@@ -46,7 +46,7 @@ export function TaxDraft() {
         <Reveal delay={0.1}>
           <div data-ui className="rounded-panel bg-cream p-5 text-ink sm:p-7">
             <div className="flex items-baseline justify-between gap-4">
-              <h3 className="font-display text-display-md font-extrabold">Draft ng 1701Q</h3>
+              <h3 className="font-display text-display-md font-black">Draft ng 1701Q</h3>
               <p className="text-sm font-semibold text-ink-muted">Q3 &middot; 8% flat</p>
             </div>
 

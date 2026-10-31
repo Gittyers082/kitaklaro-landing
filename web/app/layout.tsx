@@ -1,7 +1,12 @@
 import type { Metadata, Viewport } from 'next';
+import { EB_Garamond, Inter } from 'next/font/google';
 import './globals.css';
 import { MotionProvider } from '@/components/MotionProvider';
 import { asset } from '@/lib/assets';
+
+// Both include latin-ext: the peso sign (U+20B1) lives there.
+const inter = Inter({ weight: '900', subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
+const garamond = EB_Garamond({ subsets: ['latin', 'latin-ext'], variable: '--font-garamond' });
 
 export const metadata: Metadata = {
   title: {
@@ -23,7 +28,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fil">
+    <html lang="fil" className={`${inter.variable} ${garamond.variable}`}>
       <body>
         <a
           href="#main"

@@ -32,7 +32,7 @@ export default function LandingPage() {
         <section className="overflow-hidden bg-oxblood text-cream">
           <div className="mx-auto grid max-w-6xl gap-12 px-4 pt-12 sm:px-6 lg:grid-cols-[1.3fr_0.7fr] lg:items-end lg:gap-10 lg:pt-20">
             <div className="pb-2 lg:pb-24">
-              <h1 className="font-display text-display-xl font-extrabold">
+              <h1 className="font-display text-display-xl font-black">
                 <span className="block motion-safe:animate-rise-in">Sabihin mo lang.</span>
                 <span className="block text-gold motion-safe:animate-rise-in [animation-delay:140ms]">
                   Klaro na.
@@ -76,7 +76,7 @@ export default function LandingPage() {
           <div className="relative z-10 mx-auto -mt-24 max-w-6xl px-4 pb-16 sm:-mt-32 sm:px-6 lg:pb-24">
             <div className="rounded-panel bg-paper p-6 sm:p-12">
               <Reveal>
-                <h2 id="problema" className="max-w-[20ch] font-display text-display-lg font-extrabold">
+                <h2 id="problema" className="max-w-[20ch] font-display text-display-lg font-black">
                   Walang sagot ang kwaderno.
                 </h2>
               </Reveal>
@@ -95,7 +95,7 @@ export default function LandingPage() {
                     <dt className="max-w-[34ch] text-ink-muted">
                       ng kabuuang pautang ng bangko ang napupunta sa MSME.
                     </dt>
-                    <dd className="font-display text-display-lg font-extrabold text-oxblood">
+                    <dd className="font-display text-display-lg font-black text-oxblood">
                       <CountUp to={4.6} decimals={1} suffix="%" />
                     </dd>
                   </div>
@@ -106,7 +106,7 @@ export default function LandingPage() {
                       na surcharge, dagdag ang 2% na interes kada buwan, kapag mali o huli ang
                       pag-file ng buwis.
                     </dt>
-                    <dd className="font-display text-display-lg font-extrabold text-oxblood">
+                    <dd className="font-display text-display-lg font-black text-oxblood">
                       hanggang <CountUp to={25} suffix="%" />
                     </dd>
                   </div>
@@ -123,7 +123,7 @@ export default function LandingPage() {
         <section id="paano" aria-labelledby="paano-title" className="bg-ground pb-16 lg:pb-24">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <Reveal>
-              <h2 id="paano-title" className="max-w-[20ch] font-display text-display-lg font-extrabold">
+              <h2 id="paano-title" className="max-w-[20ch] font-display text-display-lg font-black">
                 Tatlong paraan para itala ang benta.
               </h2>
             </Reveal>
@@ -157,7 +157,7 @@ export default function LandingPage() {
               <Reveal>
                 <h2
                   id="para-kanino-title"
-                  className="max-w-[16ch] font-display text-display-lg font-extrabold"
+                  className="max-w-[16ch] font-display text-display-lg font-black"
                 >
                   Isang talaan, tatlong nagbabasa.
                 </h2>
@@ -166,7 +166,7 @@ export default function LandingPage() {
                 {AUDIENCE.map((row, i) => (
                   <Reveal key={row.who} delay={i * 0.08}>
                     <div>
-                      <dt className="font-display text-display-md font-extrabold text-oxblood">
+                      <dt className="font-display text-display-md font-black text-oxblood">
                         {row.who}
                       </dt>
                       <dd className="mt-2 max-w-[44ch]">{row.what}</dd>
@@ -188,7 +188,7 @@ export default function LandingPage() {
           <div className="bg-oxblood text-cream">
             <div className="mx-auto max-w-6xl px-4 py-16 text-center sm:px-6 lg:py-24">
               <Reveal>
-                <h2 id="simula" className="mx-auto max-w-[14ch] font-display text-display-xl font-extrabold">
+                <h2 id="simula" className="mx-auto max-w-[14ch] font-display text-display-xl font-black">
                   Klaro ang kita. Klaro ang bukas.
                 </h2>
               </Reveal>

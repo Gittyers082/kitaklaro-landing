@@ -56,7 +56,7 @@ export function Ways() {
       <Reveal className="lg:col-span-7 lg:row-span-2">
         <Card tilt={-1.4} className="flex h-full flex-col justify-between gap-10 bg-gold text-gold-ink">
           <div>
-            <h3 className="flex items-center gap-3 font-display text-display-lg font-extrabold">
+            <h3 className="flex items-center gap-3 font-display text-display-lg font-black">
               Boses
               <Mic className="h-9 w-9" aria-hidden="true" />
             </h3>
@@ -92,7 +92,7 @@ export function Ways() {
 
       <Reveal className="lg:col-span-5" delay={0.08}>
         <Card tilt={1.2} className="h-full bg-periwinkle text-cream">
-          <h3 className="flex items-center gap-3 font-display text-display-md font-extrabold">
+          <h3 className="flex items-center gap-3 font-display text-display-md font-black">
             Resibo
             <Camera className="h-7 w-7" aria-hidden="true" />
           </h3>
@@ -126,7 +126,7 @@ export function Ways() {
 
       <Reveal className="lg:col-span-5" delay={0.16}>
         <Card tilt={-0.8} className="h-full bg-ink text-cream">
-          <h3 className="flex items-center gap-3 font-display text-display-md font-extrabold">
+          <h3 className="flex items-center gap-3 font-display text-display-md font-black">
             Tap
             <Hand className="h-7 w-7" aria-hidden="true" />
           </h3>

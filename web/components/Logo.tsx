@@ -11,7 +11,7 @@ export function Logo({ tone = 'light', className = '' }: LogoProps) {
   const dark = tone === 'dark';
   return (
     <span
-      className={`inline-flex items-center gap-1.5 font-display text-lg font-extrabold tracking-tight ${className}`}
+      className={`inline-flex items-center gap-1.5 font-display text-lg font-black tracking-tight ${className}`}
     >
       {/* The PNG has ~12% transparent padding, so it is drawn a bit larger than the text. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}

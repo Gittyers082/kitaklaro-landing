@@ -1,4 +1,8 @@
-:HL["/kitaklaro-landing/_next/static/chunks/40x8gysdaidxt.css","style"]
+:HL["/kitaklaro-landing/_next/static/chunks/1fc7bbbj4qd9v.css","style"]
+:HL["/kitaklaro-landing/_next/static/media/3456dc50754e9228-s.p.32itxo7y-xsdk.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/kitaklaro-landing/_next/static/media/8f0c2db2d5b65bca-s.p.13fm422slid9x.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/kitaklaro-landing/_next/static/media/de9751bfdfafdac8-s.p.0tlhhw_qyyfys.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/kitaklaro-landing/_next/static/media/e7224975c2ad3163-s.p.02ijsf_oy6edf.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/kitaklaro-landing/favicon.png","image"]
 1:[["children",{"s":"__PAGE__","h":160}]]
-0:{"b":"VcmP3UAL71KLFlNra-HiG","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"zEJdzAt4Y62UTXfzcpQqA","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

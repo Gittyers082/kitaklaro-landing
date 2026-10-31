@@ -149,7 +149,7 @@ export function VoiceDemo() {
     >
       <div className="flex min-h-[33rem] flex-col overflow-hidden rounded-[2.25rem] border-[9px] border-ink bg-ground text-ink">
         <div className="px-4 pb-4 pt-6">
-          <p className="font-display text-[2.5rem] font-extrabold leading-none tracking-tight text-oxblood tabular-nums">
+          <p className="font-display text-[2.5rem] font-black leading-none tracking-tight text-oxblood tabular-nums">
             <AnimatedPeso key={epoch} value={total} />
           </p>
           <div className="mt-1.5 flex items-center justify-between gap-2">
