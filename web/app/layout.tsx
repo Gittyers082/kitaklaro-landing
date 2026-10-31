@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     'Itala ang benta sa boses o litrato, awtomatikong bawas sa stock, at ulat na tanggap ng BIR at ng lender. Gumagana kahit walang internet.',
   applicationName: 'KitaKlaro',
-  icons: { icon: asset('/icons/icon.svg'), apple: asset('/icons/icon-192.png') },
+  icons: { icon: asset('/favicon.png'), apple: asset('/icons/icon-192.png') },
 };
 
 export const viewport: Viewport = {

@@ -68,6 +68,7 @@ export default function LandingPage() {
         <section aria-labelledby="problema" className="relative bg-ground">
           <ParallaxPhoto
             name="owner"
+            overlay="/assets/main.png"
             sizes="100vw"
             className="h-[24rem] sm:h-[32rem]"
           />
@@ -207,12 +208,28 @@ export default function LandingPage() {
             <p>KitaKlaro &middot; Team parZval &middot; PinaSiklab Hackathon</p>
             <p>Track 3: Economic Expansion &middot; SDG 8</p>
           </div>
-          <p className="mt-4 max-w-[68ch] leading-relaxed">
-            Mga larawan, binago ang laki at format: &ldquo;Sari-Sari Store Samal Davao&rdquo; ni
-            Burgermac, CC BY 2.0; &ldquo;Baguio City Public Market, Feb 2025&rdquo; ni Ralff Nestor
-            Nacor, CC BY-SA 4.0; &ldquo;Cat on a sari-sari store&rdquo; ni Aerous, CC BY-SA 4.0.
-            Lahat ay mula sa Wikimedia Commons.
-          </p>
+          {/* The CC licenses require title, author, license and a note that we changed them. */}
+          <div className="mt-6 max-w-[68ch] leading-relaxed">
+            <p className="font-semibold text-ink">Salamat sa mga kumuha ng litrato!</p>
+            <p className="mt-1">
+              Hiniram namin sa Wikimedia Commons, at pinaliit lang nang kaunti para bumilis sa
+              cellphone:
+            </p>
+            <ul className="mt-2 space-y-1">
+              <li>
+                <span className="font-semibold text-ink">Ang tindera:</span> &ldquo;Sari-Sari Store
+                Samal Davao&rdquo; ni Burgermac, <span className="whitespace-nowrap">CC BY 2.0</span>
+              </li>
+              <li>
+                <span className="font-semibold text-ink">Ang palengke:</span> &ldquo;Baguio City
+                Public Market, Feb 2025&rdquo; ni Ralff Nestor Nacor, <span className="whitespace-nowrap">CC BY-SA 4.0</span>
+              </li>
+              <li>
+                <span className="font-semibold text-ink">Ang tunay na bantay ng tindahan:</span>{' '}
+                &ldquo;Cat on a sari-sari store&rdquo; ni Aerous, <span className="whitespace-nowrap">CC BY-SA 4.0</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </footer>
     </>
